@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adebayo Muh'sin - Fullstack Developer (Mufasir Tech)</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Container for layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('images/your-photo.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s;
+        }
+
+        #hero h2 {
+            font-size: 28px;
+            animation: fadeInUp 1.5s;
+        }
+
+        #hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        #hero a {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            animation: fadeInUp 2.5s;
+        }
+
+        #hero a:hover {
+            background-color: #fff;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* About Me Section */
+        #about {
+            background-color: #f9f9f9;
+        }
+
+        #about img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Expertise Section */
+        #expertise {
+            background-color: #333;
+            color: white;
+        }
+
+        #expertise .expertise-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #expertise h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background-color: #f9f9f9;
+        }
+
+        #portfolio .portfolio-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #portfolio img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        #portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #222;
+            color: white;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        #contact button {
+            padding: 12px 20px;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #333;
+            font-size: 16px;
+        }
+
+        #contact button:hover {
+            background-color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+     <!-- Hero Section -->
+<section id="hero">
+    <div class="container">
+        <h1>Adebayo Muh'sin</h1>
+        <h2>Popularly known as Mufasir Tech</h2>
+        <p>Fullstack Developer | Passionate about Creating Beautiful Web Experiences</p>
+        <p>With a focus on delivering high-quality solutions, I specialize in turning ideas into reality. Let's collaborate to build something amazing!</p>
+        <a href="#portfolio">Explore My Work and Discover What I Can Do for You!</a>
+    </div>
+</section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <img src="https://scontent.flos5-1.fna.fbcdn.net/v/t39.30808-6/453808185_462620496638958_3112959331366089400_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG9pzgSucTkVWAhdSV9zRxaYtZ6Vca0VNti1npVxrRU2zHHC-x6g6CLma5iMGjZ05WO1Jt--o3isQkYLuvOaGXv&_nc_ohc=RzJf-5Er6j0Q7kNvgEjjDgB&_nc_zt=23&_nc_ht=scontent.flos5-1.fna&_nc_gid=AOEgXkJzRa3ZLmD1RlUyEm7&oh=00_AYCeynQqyUT-qHGkyHrwbe9uEVZdHqvJqFDlSgxEZMVa2A&oe=671E7D4B" alt="Adebayo Muh'sin - Mufasir Tech">
+            <p>I'm Adebayo Muh'sin, widely known as Mufasir Tech. As a dedicated fullstack developer, I specialize in
+                creating seamless, user-friendly web applications. My passion is turning complex problems into elegant
+                solutions, using modern web technologies to bring ideas to life.</p>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise">
+        <div class="container">
+            <h2>My Expertise</h2>
+            <div class="expertise-item">
+                <h3>Frontend Development</h3>
+                <p>Skilled in crafting visually appealing interfaces using HTML, CSS, JavaScript, React, and Angular.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>Backend Development</h3>
+                <p>Proficient in building robust backend systems with Node.js, Express, and database management.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive designs with a strong focus on user experience and usability principles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-item">
+                <img src="images/project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A brief description of the project, highlighting key features and technologies used.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A brief description of the project, highlighting key features and technologies used.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A brief description of the project, highlighting key features and technologies used.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to discuss a project, feel free to reach out to me!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Adebayo Muh'sin | Mufasir Tech | All Rights Reserved</p>
+        <p>Connect with me on: 
+            <a href="#" style="color: #ffd700; text-decoration: none;">LinkedIn</a> | 
+            <a href="#" style="color: #ffd700; text-decoration: none;">GitHub</a> | 
+            <a href="#" style="color: #ffd700; text-decoration: none;">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
+
+           
