@@ -7,6 +7,7 @@
     <title>Adebayo Muh'sin - Fullstack Developer (Mufasir Tech)</title>
     <style>
         /* Basic Reset */
+    
         * {
             margin: 0;
             padding: 0;
@@ -20,14 +21,14 @@
             overflow-x: hidden;
         }
 
-        /* Container for layout */
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Navigation Bar */
+        
         header {
             background-color: #222;
             color: #fff;
@@ -54,7 +55,7 @@
             color: #ffd700;
         }
 
-        /* Hero Section */
+    
         #hero {
             background: url('images/your-photo.jpg') no-repeat center center/cover;
             height: 100vh;
@@ -95,8 +96,108 @@
         #hero a:hover {
             background-color: #fff;
         }
+        <style>
 
-        /* Keyframes for Animations */
+
+
+    @media screen and (max-width: 1200px) {
+    
+        .container {
+            width: 90%;
+        }
+
+    
+        nav a {
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        #hero h1 {
+            font-size: 36px;
+        }
+
+        #hero h2 {
+            font-size: 22px;
+        }
+
+        #hero p {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+    
+        nav {
+            flex-direction: column;
+        }
+
+        nav a {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        #hero {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #hero h1 {
+            font-size: 28px;
+        }
+
+        #hero h2 {
+            font-size: 20px;
+        }
+
+        #hero p {
+            font-size: 16px;
+        }
+
+        
+        #expertise .expertise-item,
+        #portfolio .portfolio-item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        
+        header {
+            padding: 10px;
+        }
+
+        nav a {
+            font-size: 14px;
+        }
+
+        #hero h1 {
+            font-size: 24px;
+        }
+
+        #hero h2 {
+            font-size: 18px;
+        }
+
+        #hero p {
+            font-size: 14px;
+        }
+
+        
+        #contact input,
+        #contact textarea {
+            font-size: 14px;
+        }
+
+        #contact button {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+
+
+
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -243,6 +344,7 @@
             padding: 20px 0;
             text-align: center;
         }
+    
     </style>
 </head>
 
