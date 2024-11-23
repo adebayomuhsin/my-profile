@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Adebayo Muh'sin, a Fullstack Developer also known as Mufasir Tech.">
-    <meta name="keywords" content="Fullstack Developer, Web Development, Portfolio, Mufasir Tech">
-    <meta name="author" content="Adebayo Muh'sin">
     <title>Adebayo Muh'sin - Fullstack Developer (Mufasir Tech)</title>
     <style>
-        /* Basic Reset */
+    
         * {
             margin: 0;
             padding: 0;
@@ -20,16 +17,17 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Container for layout */
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Navigation Bar */
+        
         header {
             background-color: #222;
             color: #fff;
@@ -43,7 +41,6 @@
         nav {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         nav a {
@@ -57,31 +54,30 @@
             color: #ffd700;
         }
 
-        /* Hero Section */
+    
         #hero {
-            background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+            background: url('images/your-photo.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
-            padding: 0 20px;
         }
 
         #hero h1 {
-            font-size: 3rem;
+            font-size: 48px;
             margin-bottom: 10px;
             animation: fadeInDown 1s;
         }
 
         #hero h2 {
-            font-size: 1.8rem;
+            font-size: 28px;
             animation: fadeInUp 1.5s;
         }
 
         #hero p {
-            font-size: 1rem;
+            font-size: 20px;
             margin-bottom: 20px;
             animation: fadeIn 2s;
         }
@@ -99,79 +95,450 @@
         #hero a:hover {
             background-color: #fff;
         }
+/* Responsive Design Adjustments */
 
-        /* Social Links */
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+/* Medium Screens (Tablet) */
+@media screen and (max-width: 1200px) {
+    nav a {
+        margin: 0 15px;
+        font-size: 16px;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    #hero h2 {
+        font-size: 24px;
+    }
+
+    #portfolio .portfolio-item {
+        width: 45%;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    #hero {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+    }
+
+    #hero h2 {
+        font-size: 20px;
+    }
+
+    #portfolio .portfolio-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #contact form {
+        padding: 10px;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 24px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+    }
+
+    #portfolio .portfolio-item img {
+        height: auto;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+
+    @media screen and (max-width: 1200px) {
+    
+        .container {
+            width: 90%;
         }
 
-        .social-icons a {
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
+    
+        nav a {
+            margin: 0 15px;
+            font-size: 16px;
         }
 
-        .social-icons a:hover {
-            color: #ffd700;
+        #hero h1 {
+            font-size: 36px;
         }
 
-        /* Portfolio Section */
-        .portfolio-item {
+        #hero h2 {
+            font-size: 22px;
+        }
+
+        #hero p {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+    
+        nav {
+            flex-direction: column;
+        }
+
+        nav a {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        #hero {
             text-align: center;
-            margin: 20px 0;
+            padding: 20px;
         }
 
-        .portfolio-item img {
+        #hero h1 {
+            font-size: 28px;
+        }
+
+        #hero h2 {
+            font-size: 20px;
+        }
+
+        #hero p {
+            font-size: 16px;
+        }
+
+        
+        #expertise .expertise-item,
+        #portfolio .portfolio-item {
             width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
+    }
 
-        .portfolio-item h3 {
-            margin-top: 10px;
-        }
-
-        /* Contact Section */
-        form input,
-        form textarea,
-        form button {
-            width: 100%;
-            margin-bottom: 10px;
+    @media screen and (max-width: 480px) {
+        
+        header {
             padding: 10px;
+        }
+
+        nav a {
+            font-size: 14px;
+        }
+
+        #hero h1 {
+            font-size: 24px;
+        }
+
+        #hero h2 {
+            font-size: 18px;
+        }
+
+        #hero p {
+            font-size: 14px;
+        }
+
+        
+        #contact input,
+        #contact textarea {
+            font-size: 14px;
+        }
+
+        #contact button {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+
+
+
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* About Me Section */
+        #about {
+            background-color: #f9f9f9;
+        }
+
+        #about img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        /* Expertise Section */
+        #expertise {
+            background-color: #333;
+            color: white;
+        }
+
+        #expertise .expertise-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #expertise h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+        font-size: 16px; /* Base font size */
+    }
+
+    /* Responsive Typography */
+    h1 {
+        font-size: 2.5rem; /* Base size for large screens */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, a, button, input, textarea {
+        font-size: 1rem; /* Regular text size */
+    }
+
+    /* Adjustments for Medium Screens (1200px and below) */
+    @media screen and (max-width: 1200px) {
+        body {
+            font-size: 15px; /* Slightly smaller base font */
+        }
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        p, a, button, input, textarea {
+            font-size: 0.95rem;
+        }
+    }
+
+    /* Adjustments for Small Screens (768px and below) */
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px; /* Smaller base font */
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p, a, button, input, textarea {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Adjustments for Extra Small Screens (480px and below) */
+    @media screen and (max-width: 480px) {
+        body {
+            font-size: 13px; /* Further reduction */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
             font-size: 1rem;
         }
 
-        form button {
-            background-color: #ffd700;
-            border: none;
-            color: #333;
-            cursor: pointer;
+        p, a, button, input, textarea {
+            font-size: 0.85rem;
+        }
+    }
+
+
+
+        /* Portfolio Section */
+        #portfolio {
+            background-color: #f9f9f9;
         }
 
-        form button:hover {
+        #portfolio .portfolio-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #portfolio img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        #portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #222;
+            color: white;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        #contact button {
+            padding: 12px 20px;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #333;
+            font-size: 16px;
+        }
+
+        #contact button:hover {
             background-color: #fff;
         }
 
         /* Footer */
         footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: #fff;
         }
-
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+    
     </style>
 </head>
 
@@ -189,21 +556,26 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Adebayo Muh'sin</h1>
-            <h2>Popularly known as Mufasir Tech</h2>
-            <p>Fullstack Developer | Passionate about Creating Beautiful Web Experiences</p>
-            <a href="#portfolio">Explore My Work!</a>
+   
 
-            <!-- Social Links -->
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/muhsin-adebayo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/adebayomuhsin" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
+<section id="hero">
+    <div class="container">
+        <h1>Adebayo Muh'sin</h1>
+        <h2>Popularly known as Mufasir Tech</h2>
+        <p>Fullstack Developer | Passionate about Creating Beautiful Web Experiences</p>
+        <p>With a focus on delivering high-quality solutions, I specialize in turning ideas into reality. Let's collaborate to build something amazing!</p>
+        <a href="#portfolio">Explore My Work and Discover What I Can Do for You!</a>
+        <div style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/muhsin-adebayo/" target="_blank" style="color: #0011ff; text-decoration: none; margin-right: 15px;">
+                LinkedIn
+            </a>
+            <a href="https://github.com/adebayomuhsin" target="_blank" style="color: #3700ff; text-decoration: none;">
+                GitHub
+            </a>
         </div>
-    </section>
+    </div>
+</section>
+
     <!-- About Me Section -->
     <section id="about">
         <div class="container">
@@ -233,7 +605,6 @@
             </div>
         </div>
     </section>
-
     <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="container">
@@ -256,6 +627,8 @@
         </div>
     </section>
 
+    
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -275,11 +648,14 @@
         <p>&copy; 2024 Adebayo Muh'sin | Mufasir Tech | All Rights Reserved</p>
         <p>Connect with me on: 
             <a href="#" style="color: #ffd700; text-decoration: none;">LinkedIn</a> | 
-            <a href="#" style="color: #ffd700; text-decoration: none;">GitHub</a> | 
+            <a href="#" style="color: #ffd700; text-decoration: none;">github</a> 
             <a href="#" style="color: #ffd700; text-decoration: none;">Twitter</a>
         </p>
     </footer>
 </body>
 </html>
+
+           
+
 
            
