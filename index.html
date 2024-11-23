@@ -26,6 +26,10 @@
             margin: 0 auto;
             padding: 20px;
         }
+        section {
+    padding: 80px 20px; /* Adds consistent space within each section */
+    margin-bottom: 40px; /* Adds space between sections */
+}
 
         
         header {
@@ -95,6 +99,33 @@
         #hero a:hover {
             background-color: #fff;
         }
+        #expertise .expertise-item {
+    width: 100%; /* Stack the items on smaller screens */
+    margin-bottom: 20px; /* Add spacing between items */
+    text-align: center; /* Center-align content for better display */
+}
+#portfolio .portfolio-item {
+    width: 100%; /* Stack items on mobile */
+    margin-bottom: 20px; /* Add spacing between items */
+    text-align: center; /* Center-align for better display */
+}
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Base font size for small screens */
+    }
+    h1, h2 {
+        font-size: 1.5rem; /* Scale down heading sizes */
+    }
+    p {
+        font-size: 0.9rem; /* Ensure readability of paragraphs */
+    }
+    nav a {
+        margin: 10px 0; /* Add space between menu items */
+        display: block; /* Stack menu items vertically */
+        text-align: center;
+    }
+}
+
 /* Responsive Design Adjustments */
 
 /* Medium Screens (Tablet) */
@@ -654,6 +685,9 @@
     </footer>
 </body>
 </html>
+
+           
+
 
            
 
