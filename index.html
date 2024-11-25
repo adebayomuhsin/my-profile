@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adebayo Muh'sin - Fullstack Developer (Mufasir Tech)</title>
+    <title>Adebayo Muh'sin - Fullstack Developer</title>
     <style>
-    
+        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -17,545 +17,153 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        section {
-    padding: 80px 20px; /* Adds consistent space within each section */
-    margin-bottom: 40px; /* Adds space between sections */
-}
-
-        
+        /* Header / Navigation */
         header {
             background-color: #222;
             color: #fff;
-            padding: 15px 0;
+            padding: 15px 20px;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+            color: #ffd700;
         }
 
         nav {
             display: flex;
-            justify-content: center;
+            gap: 20px;
         }
 
         nav a {
             color: #fff;
-            margin: 0 20px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         nav a:hover {
             color: #ffd700;
         }
 
-    
+        /* Hero Section */
         #hero {
-            background: url('images/your-photo.jpg') no-repeat center center/cover;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             text-align: center;
+            color: white;
+            padding: 0 20px;
         }
 
         #hero h1 {
-            font-size: 48px;
+            font-size: 3rem;
             margin-bottom: 10px;
-            animation: fadeInDown 1s;
-        }
-
-        #hero h2 {
-            font-size: 28px;
-            animation: fadeInUp 1.5s;
         }
 
         #hero p {
-            font-size: 20px;
+            font-size: 1.2rem;
             margin-bottom: 20px;
-            animation: fadeIn 2s;
         }
 
         #hero a {
-            display: inline-block;
+            padding: 10px 25px;
             background-color: #ffd700;
             color: #333;
-            padding: 15px 30px;
             text-decoration: none;
+            font-size: 18px;
             border-radius: 30px;
-            animation: fadeInUp 2.5s;
         }
 
         #hero a:hover {
             background-color: #fff;
         }
-        #expertise .expertise-item {
-    width: 100%; /* Stack the items on smaller screens */
-    margin-bottom: 20px; /* Add spacing between items */
-    text-align: center; /* Center-align content for better display */
-}
-#portfolio .portfolio-item {
-    width: 100%; /* Stack items on mobile */
-    margin-bottom: 20px; /* Add spacing between items */
-    text-align: center; /* Center-align for better display */
-}
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px; /* Base font size for small screens */
-    }
-    h1, h2 {
-        font-size: 1.5rem; /* Scale down heading sizes */
-    }
-    p {
-        font-size: 0.9rem; /* Ensure readability of paragraphs */
-    }
-    nav a {
-        margin: 10px 0; /* Add space between menu items */
-        display: block; /* Stack menu items vertically */
-        text-align: center;
-    }
-}
 
-/* Responsive Design Adjustments */
-
-/* Medium Screens (Tablet) */
-@media screen and (max-width: 1200px) {
-    nav a {
-        margin: 0 15px;
-        font-size: 16px;
-    }
-
-    #hero h1 {
-        font-size: 36px;
-    }
-
-    #hero h2 {
-        font-size: 24px;
-    }
-
-    #portfolio .portfolio-item {
-        width: 45%;
-    }
-}
-
-/* Small Screens (Mobile) */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    #hero {
-        height: auto;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    #hero h1 {
-        font-size: 28px;
-    }
-
-    #hero h2 {
-        font-size: 20px;
-    }
-
-    #portfolio .portfolio-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #contact form {
-        padding: 10px;
-    }
-
-    #contact input,
-    #contact textarea {
-        font-size: 14px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
-}
-
-/* Extra Small Screens (Mobile Portrait) */
-@media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    #hero h1 {
-        font-size: 24px;
-    }
-
-    #hero h2 {
-        font-size: 18px;
-    }
-
-    #portfolio .portfolio-item img {
-        height: auto;
-    }
-
-    footer p {
-        font-size: 10px;
-    }
-}
-
-    @media screen and (max-width: 1200px) {
-    
-        .container {
-            width: 90%;
-        }
-
-    
-        nav a {
-            margin: 0 15px;
-            font-size: 16px;
-        }
-
-        #hero h1 {
-            font-size: 36px;
-        }
-
-        #hero h2 {
-            font-size: 22px;
-        }
-
-        #hero p {
-            font-size: 18px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-    
-        nav {
-            flex-direction: column;
-        }
-
-        nav a {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        #hero {
-            text-align: center;
-            padding: 20px;
-        }
-
-        #hero h1 {
-            font-size: 28px;
-        }
-
-        #hero h2 {
-            font-size: 20px;
-        }
-
-        #hero p {
-            font-size: 16px;
-        }
-
-        
-        #expertise .expertise-item,
-        #portfolio .portfolio-item {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        
-        header {
-            padding: 10px;
-        }
-
-        nav a {
-            font-size: 14px;
-        }
-
-        #hero h1 {
-            font-size: 24px;
-        }
-
-        #hero h2 {
-            font-size: 18px;
-        }
-
-        #hero p {
-            font-size: 14px;
-        }
-
-        
-        #contact input,
-        #contact textarea {
-            font-size: 14px;
-        }
-
-        #contact button {
-            font-size: 14px;
-            padding: 10px 15px;
-        }
-    }
-
-
-
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        /* About Me Section */
-        #about {
+        /* Things I Can Do Section */
+        #things-i-can-do {
+            padding: 80px 20px;
             background-color: #f9f9f9;
+            text-align: center;
         }
 
-        #about img {
-            width: 200px;
-            border-radius: 50%;
+        #things-i-can-do h2 {
+            font-size: 2rem;
             margin-bottom: 20px;
-            animation: fadeIn 1.5s;
         }
 
-        #about p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 18px;
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
-        /* Expertise Section */
-        #expertise {
-            background-color: #333;
-            color: white;
-        }
-
-        #expertise .expertise-item {
-            display: inline-block;
-            width: 30%;
-            margin: 10px;
-            background-color: #444;
+        .skill-item {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
             padding: 20px;
-            border-radius: 10px;
+            width: 250px;
+            text-align: center;
         }
 
-        #expertise h3 {
-            color: #ffd700;
+        .skill-item h3 {
+            color: #333;
             margin-bottom: 10px;
         }
-    /* Basic Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
 
-    body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        overflow-x: hidden;
-        font-size: 16px; /* Base font size */
-    }
-
-    /* Responsive Typography */
-    h1 {
-        font-size: 2.5rem; /* Base size for large screens */
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    p, a, button, input, textarea {
-        font-size: 1rem; /* Regular text size */
-    }
-
-    /* Adjustments for Medium Screens (1200px and below) */
-    @media screen and (max-width: 1200px) {
-        body {
-            font-size: 15px; /* Slightly smaller base font */
-        }
-
-        h1 {
-            font-size: 2.2rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-        }
-
-        p, a, button, input, textarea {
-            font-size: 0.95rem;
-        }
-    }
-
-    /* Adjustments for Small Screens (768px and below) */
-    @media screen and (max-width: 768px) {
-        body {
-            font-size: 14px; /* Smaller base font */
-        }
-
-        h1 {
-            font-size: 1.8rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-        }
-
-        p, a, button, input, textarea {
-            font-size: 0.9rem;
-        }
-    }
-
-    /* Adjustments for Extra Small Screens (480px and below) */
-    @media screen and (max-width: 480px) {
-        body {
-            font-size: 13px; /* Further reduction */
-        }
-
-        h1 {
-            font-size: 1.5rem;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-        }
-
-        h3 {
-            font-size: 1rem;
-        }
-
-        p, a, button, input, textarea {
-            font-size: 0.85rem;
-        }
-    }
-
-
-
-        /* Portfolio Section */
-        #portfolio {
-            background-color: #f9f9f9;
-        }
-
-        #portfolio .portfolio-item {
-            display: inline-block;
-            width: 30%;
-            margin: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        #portfolio img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        #portfolio img:hover {
-            transform: scale(1.05);
+        .skill-item p {
+            font-size: 14px;
         }
 
         /* Contact Section */
         #contact {
+            padding: 80px 20px;
             background-color: #222;
             color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         #contact form {
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
         #contact input,
         #contact textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 10px;
+            padding: 10px;
             border: 1px solid #444;
             border-radius: 5px;
+            font-size: 14px;
             background-color: #333;
             color: white;
         }
 
         #contact button {
-            padding: 12px 20px;
+            padding: 10px 15px;
             background-color: #ffd700;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            color: #333;
             font-size: 16px;
+            color: #333;
         }
 
         #contact button:hover {
@@ -564,127 +172,110 @@
 
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #111;
             color: white;
-            padding: 20px 0;
             text-align: center;
+            padding: 20px 0;
         }
-    
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .skill-item {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Header / Navigation -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <nav>
-                <a href="#hero">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+        <h1>Mufasir Tech</h1>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#things-i-can-do">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-   
-
-<section id="hero">
-    <div class="container">
-        <h1>Adebayo Muh'sin</h1>
-        <h2>Popularly known as Mufasir Tech</h2>
-        <p>Fullstack Developer | Passionate about Creating Beautiful Web Experiences</p>
-        <p>With a focus on delivering high-quality solutions, I specialize in turning ideas into reality. Let's collaborate to build something amazing!</p>
-        <a href="#portfolio">Explore My Work and Discover What I Can Do for You!</a>
-        <div style="margin-top: 20px;">
-            <a href="https://www.linkedin.com/in/muhsin-adebayo/" target="_blank" style="color: #0011ff; text-decoration: none; margin-right: 15px;">
-                LinkedIn
-            </a>
-            <a href="https://github.com/adebayomuhsin" target="_blank" style="color: #3700ff; text-decoration: none;">
-                GitHub
-            </a>
-        </div>
-    </div>
-</section>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <img src="https://scontent.flos5-2.fna.fbcdn.net/v/t39.30808-6/380539779_274245682143108_1176496881372830516_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeE8j_9pId7w5uPF5JoyRBXEue-tqvljzOG5762q-WPM4S5ZjIwdKDswEX1ViWaFQNeumNfLLGJe3pKtXEH9a689&_nc_ohc=IyZbYkjx4KoQ7kNvgHWlRmb&_nc_zt=23&_nc_ht=scontent.flos5-2.fna&_nc_gid=AmzTC8bOF6ftcjvDOYnDbcK&oh=00_AYBno1AxieJzGInOmhSQCj8ELgbl7Pj1hhH0v4f1ievAHA&oe=67458ADC" alt="Adebayo Muh'sin - Mufasir Tech">
-            <p>I'm Adebayo Muh'sin, widely known as Mufasir Tech. As a dedicated fullstack developer, I specialize in
-                creating seamless, user-friendly web applications. My passion is turning complex problems into elegant
-                solutions, using modern web technologies to bring ideas to life.</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div>
+            <h1>Welcome to My World</h1>
+            <p>I’m Adebayo Muh'sin, popularly known as Mufasir Tech.<br>Let’s build the future together!</p>
+            <a href="#contact">Get in Touch</a>
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise">
-        <div class="container">
-            <h2>My Expertise</h2>
-            <div class="expertise-item">
+    <!-- Things I Can Do Section -->
+    <section id="things-i-can-do">
+        <h2>Things I Can Do</h2>
+        <div class="skills-container">
+            <div class="skill-item">
                 <h3>Frontend Development</h3>
-                <p>Skilled in crafting visually appealing interfaces using HTML, CSS, JavaScript, React, and Angular.</p>
+                <p>Building responsive and interactive user interfaces using HTML, CSS, JavaScript, and React.</p>
             </div>
-            <div class="expertise-item">
+            <div class="skill-item">
                 <h3>Backend Development</h3>
-                <p>Proficient in building robust backend systems with Node.js, Express, and database management.</p>
+                <p>Creating robust APIs and server-side solutions with Node.js, Express, and databases.</p>
             </div>
-            <div class="expertise-item">
+            <div class="skill-item">
                 <h3>UI/UX Design</h3>
-                <p>Creating intuitive designs with a strong focus on user experience and usability principles.</p>
+                <p>Designing seamless and user-friendly experiences for web and mobile applications.</p>
             </div>
         </div>
     </section>
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>My Portfolio</h2>
-            <div class="portfolio-item">
-                <img src="images/project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>A responsive google form for someone abroad.</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://www.petronas.com/" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>work as frontend developer for a team to build on responsive website for a fuel company  .</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://adebayomuhsin.github.io/Kyc-project/" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>A kcy service to reduce the rate of fraud in the society.</p>
-            </div>
-        </div>
-    </section>
-
-    
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you have any questions or would like to discuss a project, feel free to reach out to me!</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Adebayo Muh'sin | Mufasir Tech | All Rights Reserved</p>
-        <p>Connect with me on: 
-            <a href="#" style="color: #ffd700; text-decoration: none;">LinkedIn</a> | 
-            <a href="#" style="color: #ffd700; text-decoration: none;">github</a> 
-            <a href="#" style="color: #ffd700; text-decoration: none;">Twitter</a>
+        <p>&copy; 2024 Adebayo Muh'sin | Mufasir Tech</p>
+        <p>
+            Follow me on 
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com" target="_blank">GitHub</a>
         </p>
     </footer>
 </body>
+
 </html>
+
 
            
 
