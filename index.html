@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adebayo Muh'sin - Fullstack Developer</title>
+    <title>Mufasir Tech - Homepage</title>
     <style>
-        /* Basic Reset */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -17,16 +17,18 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
         }
 
-        /* Header / Navigation */
+        /* Header */
         header {
             background-color: #222;
             color: #fff;
-            padding: 15px 20px;
+            padding: 20px 30px;
             position: fixed;
-            width: 100%;
             top: 0;
+            width: 100%;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
@@ -34,7 +36,7 @@
         }
 
         header h1 {
-            font-size: 20px;
+            font-size: 24px;
             color: #ffd700;
         }
 
@@ -44,7 +46,7 @@
         }
 
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             font-size: 16px;
         }
@@ -54,50 +56,51 @@
         }
 
         /* Hero Section */
-        #hero {
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+        #homepage {
             height: 100vh;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             color: white;
-            padding: 0 20px;
+            text-align: center;
+            padding: 20px;
         }
 
-        #hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        #hero p {
-            font-size: 1.2rem;
+        #homepage h1 {
+            font-size: 4rem;
             margin-bottom: 20px;
         }
 
-        #hero a {
-            padding: 10px 25px;
-            background-color: #ffd700;
-            color: #333;
-            text-decoration: none;
+        #homepage p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        #homepage a {
+            padding: 15px 30px;
             font-size: 18px;
+            background-color: #ffd700;
+            color: #222;
+            text-decoration: none;
             border-radius: 30px;
         }
 
-        #hero a:hover {
+        #homepage a:hover {
             background-color: #fff;
         }
 
-        /* Things I Can Do Section */
-        #things-i-can-do {
-            padding: 80px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
+        /* Skills Section */
+        #skills {
+            padding: 100px 20px;
+            background-color: #fff;
         }
 
-        #things-i-can-do h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        #skills h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
         }
 
         .skills-container {
@@ -107,22 +110,27 @@
             gap: 20px;
         }
 
-        .skill-item {
-            background-color: #fff;
+        .skill-card {
+            background-color: #f9f9f9;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-            width: 250px;
+            border-radius: 10px;
+            width: 300px;
             text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
         }
 
-        .skill-item h3 {
-            color: #333;
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card h3 {
+            color: #222;
             margin-bottom: 10px;
         }
 
-        .skill-item p {
-            font-size: 14px;
+        .skill-card p {
+            color: #555;
         }
 
         /* Contact Section */
@@ -130,52 +138,51 @@
             padding: 80px 20px;
             background-color: #222;
             color: white;
-            text-align: center;
         }
 
         #contact h2 {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
 
-        #contact form {
-            max-width: 400px;
+        form {
+            max-width: 500px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
 
-        #contact input,
-        #contact textarea {
-            padding: 10px;
-            border: 1px solid #444;
-            border-radius: 5px;
-            font-size: 14px;
-            background-color: #333;
-            color: white;
-        }
-
-        #contact button {
-            padding: 10px 15px;
-            background-color: #ffd700;
+        form input,
+        form textarea {
+            padding: 15px;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
-            color: #333;
+            width: 100%;
         }
 
-        #contact button:hover {
+        form button {
+            padding: 15px;
+            background-color: #ffd700;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #222;
+            cursor: pointer;
+        }
+
+        form button:hover {
             background-color: #fff;
         }
 
         /* Footer */
         footer {
+            text-align: center;
+            padding: 20px;
             background-color: #111;
             color: white;
-            text-align: center;
-            padding: 20px 0;
         }
 
         footer a {
@@ -187,26 +194,17 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
+        /* Media Queries */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
+            #homepage h1 {
+                font-size: 2.5rem;
             }
 
-            nav {
-                gap: 10px;
+            #homepage p {
+                font-size: 1.2rem;
             }
 
-            #hero h1 {
-                font-size: 2rem;
-            }
-
-            #hero p {
-                font-size: 1rem;
-            }
-
-            .skill-item {
+            .skill-card {
                 width: 100%;
             }
         }
@@ -218,36 +216,36 @@
     <header>
         <h1>Mufasir Tech</h1>
         <nav>
-            <a href="#hero">Home</a>
-            <a href="#things-i-can-do">Skills</a>
+            <a href="#homepage">Home</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
+    <!-- Homepage Section -->
+    <section id="homepage">
         <div>
-            <h1>Welcome to My World</h1>
-            <p>I’m Adebayo Muh'sin, popularly known as Mufasir Tech.<br>Let’s build the future together!</p>
-            <a href="#contact">Get in Touch</a>
+            <h1>Welcome to Mufasir Tech</h1>
+            <p>Empowering the future, one line of code at a time!</p>
+            <a href="#contact">Contact Me</a>
         </div>
     </section>
 
-    <!-- Things I Can Do Section -->
-    <section id="things-i-can-do">
-        <h2>Things I Can Do</h2>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
         <div class="skills-container">
-            <div class="skill-item">
+            <div class="skill-card">
                 <h3>Frontend Development</h3>
-                <p>Building responsive and interactive user interfaces using HTML, CSS, JavaScript, and React.</p>
+                <p>Building modern, responsive websites using HTML, CSS, and JavaScript.</p>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <h3>Backend Development</h3>
-                <p>Creating robust APIs and server-side solutions with Node.js, Express, and databases.</p>
+                <p>Creating APIs and databases with Node.js, Express, and MongoDB.</p>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <h3>UI/UX Design</h3>
-                <p>Designing seamless and user-friendly experiences for web and mobile applications.</p>
+                <p>Designing beautiful, user-friendly web and mobile applications.</p>
             </div>
         </div>
     </section>
@@ -255,23 +253,29 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Adebayo Muh'sin | Mufasir Tech</p>
-        <p>
-            Follow me on 
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com" target="_blank">GitHub</a>
-        </p>
+        <p>&copy; 2024 Mufasir Tech. All Rights Reserved.</p>
+        <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out! I will get back to you soon.');
+            form.reset();
+        });
+    </script>
 </body>
 
 </html>
